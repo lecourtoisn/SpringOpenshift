@@ -15,6 +15,12 @@ public class SimpleController extends SpringBootServletInitializer {
         return "Simple client";
     }
 
+    @RequestMapping("hello")
+    @ResponseBody
+    String hello() {
+        return "Hello !";
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(SimpleController.class, args);
     }
