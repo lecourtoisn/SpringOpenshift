@@ -41,7 +41,7 @@
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <outputDirectory>target</outputDirectory>
-                    <warName>ROOT</warName>
+                    <warName>JUSTANOTHERNAME</warName>
                 </configuration>
             </plugin>
         </plugins>
