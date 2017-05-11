@@ -54,6 +54,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>ROOT.war</finalName>
+        <finalName>ROOT</finalName>
     </build>
 </project>
