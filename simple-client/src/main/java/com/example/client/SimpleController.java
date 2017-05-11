@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
 @SpringBootApplication
 public class SimpleController extends SpringBootServletInitializer {
 
