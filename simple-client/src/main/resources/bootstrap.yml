@@ -1,6 +1,11 @@
 spring:
   application:
-    name: Aramis
+    name: Artemis
+  profiles:
+    active: prod
+  cloud:
+    config:
+      uri: http://config-server.springopenshift.svc:8080
 eureka:
   client:
     serviceUrl:

@@ -1,5 +1,6 @@
 package com.example.client;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
@@ -13,6 +14,14 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 public class SimpleController extends SpringBootServletInitializer {
+    @Value("${eureka_server}")
+    String eurekaServer = "No eureka server found";
+
+    @Value("${welcome_message}")
+    String welcomeMessage = "No welcome message found";
+
+    @Value("${not_existing_config}")
+    String notExistingConfig = "No such thing";
 
     @RequestMapping("/")
     @ResponseBody
@@ -26,7 +35,11 @@ public class SimpleController extends SpringBootServletInitializer {
     @RequestMapping("hello")
     @ResponseBody
     String hello() {
-        return "Hello !";
+        StringBuilder builder = new StringBuilder();
+        builder.append(eurekaServer).append("\n");
+        builder.append(welcomeMessage).append("\n");
+        builder.append(notExistingConfig).append("\n");
+        return builder.toString();
     }
 
 
