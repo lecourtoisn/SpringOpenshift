@@ -6,8 +6,5 @@ spring:
   cloud:
     config:
       uri: http://config-server.springopenshift.svc:8080
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: ${eureka_server}
-#      defaultZone: http://eureka-server.springopenshift.svc:8080/eureka
+
+# Eureka server is uri is set by the config-server
