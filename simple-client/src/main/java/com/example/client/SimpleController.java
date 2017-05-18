@@ -19,7 +19,7 @@ public class SimpleController extends SpringBootServletInitializer {
     String home() {
         String message = "";
         RestTemplate template = new RestTemplate();
-        String result = template.getForObject("http://eureka-server.springopenshift.svc:8080", String.class);
+        String result = template.getForObject("http://eureka-server.springopenshift.svc:8080/eureka/apps", String.class);
         return result;
     }
 
