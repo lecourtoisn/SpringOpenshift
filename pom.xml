@@ -11,6 +11,7 @@
     <modules>
         <module>simple-client</module>
         <module>eureka-server</module>
+        <module>configserver</module>
     </modules>
 
 
