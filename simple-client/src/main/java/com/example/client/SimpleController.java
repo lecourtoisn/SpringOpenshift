@@ -20,8 +20,8 @@ public class SimpleController extends SpringBootServletInitializer {
     @Value("${welcome_message}")
     String welcomeMessage = "No welcome message found";
 
-//    @Value("${not_existing_config}")
-//    String notExistingConfig = "No such thing";
+    @Value("${not_existing_config:TheTest}")
+    String notExistingConfig = "No such thing";
 
     @RequestMapping("/")
     @ResponseBody
@@ -38,7 +38,7 @@ public class SimpleController extends SpringBootServletInitializer {
         StringBuilder builder = new StringBuilder();
         builder.append(eurekaServer).append("\n");
         builder.append(welcomeMessage).append("\n");
-//        builder.append(notExistingConfig).append("\n");
+        builder.append(notExistingConfig).append("\n");
         return builder.toString();
     }
 
