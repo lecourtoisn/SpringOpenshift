@@ -2,12 +2,7 @@ spring:
   application:
     name: zuul
   profiles:
-    active: prod
+    active: ${profile:local}
   cloud:
     config:
-      uri: http://config-server.springopenshift.svc:8080
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://eureka-server.springopenshift.svc:8080/eureka
+      uri: ${config_server_uri:http://localhost:8080}

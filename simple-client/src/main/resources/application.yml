@@ -1,2 +1,6 @@
 server:
-  port: 8080
+  port: ${port}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka_uri}
