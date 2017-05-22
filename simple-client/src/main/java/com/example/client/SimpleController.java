@@ -40,8 +40,7 @@ public class SimpleController extends SpringBootServletInitializer {
             sb.append("Uri: ").append(instance.getUri()).append("<br \\>");
             sb.append("Metadata: ").append(instance.getMetadata()).append("<br \\>");
             sb.append("<br \\>");
-            sb.append("__________________________________");
-            sb.append("<br \\>");
+            sb.append("__________________________________").append("<br \\>");
         }
         return sb.toString();
     }
