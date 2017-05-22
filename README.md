@@ -29,7 +29,7 @@ public class SimpleController extends SpringBootServletInitializer {
 }
 ```
 
-The following dependency must be set in the path:
+The following dependency must be set in the `pom.xml`:
 ```
 <dependency>
     <groupId>javax.servlet</groupId>
