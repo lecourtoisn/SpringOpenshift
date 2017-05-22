@@ -11,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.List;
 
 @Controller
@@ -25,7 +27,15 @@ public class SimpleController extends SpringBootServletInitializer {
     @RequestMapping("/")
     @ResponseBody
     String home() {
-        return "Hello world!";
+        StringBuilder sb = new StringBuilder();
+        String hostname = "";
+        try {
+            hostname = InetAddress.getLocalHost().toString();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        sb.append(hostname).append("<br \\>");
+        return sb.toString();
     }
 
     @RequestMapping("hello")
