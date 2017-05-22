@@ -1,6 +1,8 @@
 server:
   port: ${port}
 eureka:
+  instance:
+    preferIpAddress: true
   client:
     serviceUrl:
       defaultZone: ${eureka_uri}
