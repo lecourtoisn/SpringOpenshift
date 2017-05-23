@@ -8,6 +8,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/lecourtoisn/randomconfig.git
+          uri: https://github.com/lecourtoisn/SpringOpenshift.git
           clone-on-start: true
+          default-label: base
+          searchPaths: config-sources
 

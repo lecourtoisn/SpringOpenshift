@@ -18,7 +18,7 @@ import java.util.List;
 @Controller
 @SpringBootApplication
 @EnableEurekaClient
-public class SimpleController extends SpringBootServletInitializer {
+public class App extends SpringBootServletInitializer {
 
 
     @Autowired
@@ -57,6 +57,6 @@ public class SimpleController extends SpringBootServletInitializer {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(SimpleController.class, args);
+        SpringApplication.run(App.class, args);
     }
 }

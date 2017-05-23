@@ -1,0 +1,2 @@
+eureka_uri: http://eureka-server.springopenshift.svc:8080/eureka
+port: 8080
