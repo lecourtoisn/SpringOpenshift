@@ -1,8 +1,8 @@
-# Spring boot and Netflix stack on OpenShift
+# Spring Boot and Netflix stack on OpenShift
 
-## Running a Springboot application on Openshift
+## Running a Spring Boot application on Openshift
 ### Tomcat exclusion
-Openshift provides a Wildfly base image for running java web applications which enters into conflict with tomcat which is embedded in Spring boot. So the following exclusion have to be set in the `pom.xml`:
+Openshift provides a Wildfly base image for running java web applications which enters into conflict with tomcat which is embedded in Spring Boot. So the following exclusion have to be set in the `pom.xml`:
 ```
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -17,7 +17,7 @@ Openshift provides a Wildfly base image for running java web applications which 
 ```
 
 ### Servlet dependency
-The Spring boot application must extends `org.springframework.boot.web.support.SpringBootServletInitializer`:
+The Spring Boot application must extends `org.springframework.boot.web.support.SpringBootServletInitializer`:
 ```
 @Controller
 @SpringBootApplication
@@ -41,3 +41,12 @@ The following dependency must be set in the `pom.xml`:
 ### War packaging
 The output of the build process must be a `.war` named `ROOT.war`.
 To do so, add `<packaging>war</packaging>` in your `pom.xml` and `<finalName>ROOT</finalName>` in the build section.
+
+
+### Spring Boot Maven plugin
+```
+ <plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+</plugin>
+```
