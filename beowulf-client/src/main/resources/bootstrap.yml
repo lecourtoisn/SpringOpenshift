@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Beowulf
+  profiles:
+    active: ${profile:local}
+  cloud:
+    config:
+      uri: ${config_server_uri:http://localhost:8080}

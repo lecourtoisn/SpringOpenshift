@@ -1,0 +1,15 @@
+server:
+  port: ${port:8080}
+management:
+  security:
+    enabled: false
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lecourtoisn/SpringOpenshift.git
+          clone-on-start: true
+          default-label: base
+          searchPaths: config-sources
+
