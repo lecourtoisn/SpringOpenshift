@@ -17,7 +17,7 @@ Openshift provides a Wildfly base image for running java web applications which 
 ```
 
 ### Servlet dependency
-The Spring Boot application must extends `org.springframework.boot.web.support.SpringBootServletInitializer`:
+The Spring Boot application must extend `org.springframework.boot.web.support.SpringBootServletInitializer`:
 ```
 @Controller
 @SpringBootApplication
@@ -45,7 +45,7 @@ To do so, add `<packaging>war</packaging>` in your `pom.xml` and `<finalName>ROO
 
 ### Spring Boot Maven plugin
 ```
- <plugin>
+<plugin>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-maven-plugin</artifactId>
 </plugin>
