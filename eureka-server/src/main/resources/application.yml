@@ -2,6 +2,8 @@ server:
   port: ${port}
 
 eureka:
+  server:
+    enableSelfPreservation: false
   instance:
     hostname: localhost
   client:
